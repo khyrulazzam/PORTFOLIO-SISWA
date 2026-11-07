@@ -1,36 +1,145 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+{
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    box-sizing: border-box;
 }
-main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f172a; /* Dark Slate Background */
+    color: #e2e8f0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==============================================
+   HEADER / HERO SECTION
+   ============================================== */
+.hero {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%);
+    text-align: center;
+    padding: 60px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    background: #ffffff;
+    color: #4f46e5;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.hero .tagline {
+    font-size: 1.1rem;
+    color: #f1f5f9;
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+/* ==============================================
+   CONTAINER & CARDS
+   ============================================== */
+.container {
+    max-width: 850px;
+    width: 90%;
+    margin: -30px auto 40px auto; /* Membuat card sedikit menumpuk ke header */
+    flex: 1;
 }
 
 .card {
-    background: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    /* Tambahan Perubahan pada Commit ke-2 (Langkah 5) */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    /* Transisi untuk animasi halus di Commit Ke-2 */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efek Hover untuk Commit Ke-2 */
+.card h2 {
+    color: #38bdf8;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #334155;
+    padding-bottom: 8px;
+}
+
+.card p {
+    color: #94a3b8;
+    font-size: 1rem;
+}
+
+/* ==============================================
+   SKILLS & PROJECT BADGES
+   ============================================== */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-badge {
+    background: #334155;
+    color: #38bdf8;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid #475569;
+}
+
+.project-box {
+    background: #0f172a;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border-left: 4px solid #7c3aed;
+}
+
+.project-box h3 {
+    color: #f8fafc;
+    margin-bottom: 5px;
+}
+
+/* ==============================================
+   EFEK HOVER (Untuk Langkah 5 / Commit Ke-2)
+   ============================================== */
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transform: translateY(-8px);
+    border-color: #6366f1;
+    box-shadow: 0 15px 35px rgba(99, 102, 241, 0.2);
 }
 
+.skill-badge:hover {
+    background: #4f46e5;
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+/* ==============================================
+   FOOTER
+   ============================================== */
 footer {
     text-align: center;
-    padding: 10px;
-    background: #2b3a42;
-    color: #fff;
+    padding: 20px;
+    background: #090d16;
+    color: #64748b;
+    font-size: 0.9rem;
 }
